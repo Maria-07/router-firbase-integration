@@ -27,6 +27,7 @@ const useFirebase = () => {
     signOut(auth).then(() => {});
   };
 
+  // changes of login part
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       setUsers(user);
