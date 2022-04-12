@@ -1,9 +1,23 @@
 import React from "react";
+import useFirebase from "../../hooks/useFirebase";
 
 const Login = () => {
+  const { signInWIthGoogle } = useFirebase();
+
+  // const signInWIthGoogle = () => {
+  //   console.log("sign in Google");
+  // };
+
   return (
     <div className="">
       <h2 className=" text-2xl font-semibold text-cyan-500 mb-5">Login :</h2>
+      <button
+        onClick={signInWIthGoogle}
+        className=" text-3xl font-bold text-red-700"
+      >
+        Google
+      </button>
+      <h1 className=" font-normal text-lg my-5">Or</h1>
       <form>
         <input
           type="email"
